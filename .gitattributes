@@ -1,0 +1,34 @@
+# Auto detect text files and perform LF normalization
+# to be like the setting from the .editorconfig file
+* text eol=lf
+
+# Hints for GitHub linguist library
+Docs/* linguist-documentation
+
+# source files
+*.c       text diff=cpp
+*.cpp     text diff=cpp
+*.h       text diff=cpp
+*.s       text
+*.ld      text
+*.cs      diff=csharp
+*.mk      text
+Makefile  text
+sdkconfig text
+
+# KiCad files
+*.pro       eol=crlf
+*.sch       eol=crlf
+*.net       eol=crlf
+*.kicad_pcb eol=crlf
+*-cache.lib eol=crlf
+
+# simple txt and markup languages
+*.txt eof=crlf
+*.md  text
+*.rst text
+*.textile text
+
+# binary files
+*.jpg binary
+*.png binary
