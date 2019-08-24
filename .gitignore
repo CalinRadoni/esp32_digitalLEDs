@@ -1,6 +1,7 @@
 build/
-/sdkconfig.old
-
+sdkconfig.old
+sdkconfig
+*.swp
 /.settings/
 /.cproject
 /.project
