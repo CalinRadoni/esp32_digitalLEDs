@@ -23,7 +23,7 @@ void app_main(void)
     nvs_flash_init();
 
     dled_strip_init(&strip);
-    dled_strip_create(&strip, DLED_WS281x, 300, 32);
+    dled_strip_create(&strip, DLED_WS281x, CONFIG_NUMBER_PIXELS, 32);
 
     rmt_dled_init(&rps);
 

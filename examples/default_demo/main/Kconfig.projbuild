@@ -1,0 +1,7 @@
+menu "esp32_digitalLEDs demo application"
+    config NUMBER_PIXELS
+        int "Number of pixels"
+        default 8
+        help
+            Number of LED pixels
+endmenu
