@@ -6,6 +6,10 @@
 
 #include "esp32_rmt_dled.h"
 
+#define DIN_GPIO_NUM 16
+#define MAX_BRIGHTNESS 32
+#define RMT_CHANNEL 0
+
 static const char *TAG = "main";
 
 void delay_ms(uint32_t ms)
@@ -23,7 +27,7 @@ void app_main(void)
     nvs_flash_init();
 
     dled_strip_init(&strip);
-    dled_strip_create(&strip, DLED_WS281x, CONFIG_NUMBER_PIXELS, 32);
+    dled_strip_create(&strip, DLED_WS281x, CONFIG_NUMBER_PIXELS, MAX_BRIGHTNESS);
 
     rmt_dled_init(&rps);
 
@@ -33,7 +37,7 @@ void app_main(void)
         while(true) { }
     }
 
-    err = rmt_dled_config(&rps, 16, 0);
+    err = rmt_dled_config(&rps, DIN_GPIO_NUM, RMT_CHANNEL);
     if (err != ESP_OK) {
         ESP_LOGE(TAG, "[0x%x] rmt_dled_config failed", err);
         while(true) { }
