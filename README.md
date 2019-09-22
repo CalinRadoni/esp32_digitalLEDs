@@ -1,5 +1,19 @@
 # esp32_digitalLEDs
 
+## Note
+
+This repository is archived because I have built a better version in the
+[pax-devices](https://github.com/CalinRadoni/pax-devices) repository.
+
+The new version:
+
+- is made as an esp-idf component;
+- it is faster and uses less memory;
+- uses C++ objects;
+- is better structured.
+
+## Description
+
 Controls *WS2812B type* digital LEDs using the RMT peripheral of ESP32.
 
 This implementation uses the RMT driver from `ESP-IDF` and uses one `RMT` channel 
