@@ -2,15 +2,12 @@
 
 ## Note
 
-This repository is archived because I have built a better version in the
-[pax-devices](https://github.com/CalinRadoni/pax-devices) repository.
+This repository is archived because I have built a better version.
 
-The new version:
+The new version is *converted* to C++ and is splitted in these esp-idf components:
 
-- is made as an esp-idf component;
-- it is faster and uses less memory;
-- uses C++ objects;
-- is better structured.
+- [ESP32DLEDController](https://github.com/CalinRadoni/ESP32DLEDController)
+- [ESP32RMT](https://github.com/CalinRadoni/ESP32RMT)
 
 ## Description
 
